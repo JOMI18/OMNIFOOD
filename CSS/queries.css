@@ -1,0 +1,140 @@
+/* rem and em do not respond on html font size  in media queries */
+/* 1rem = 1em = 16px */
+/* em is the preferred metric because it doesn't have bugs on different browsers */
+
+/* ****************************************** */
+/* BELOW 1344PX (FOR SMALLER DESKTOPS)*/
+/* ****************************************** */
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+    /* background-color: aqua; */
+  }
+  .hero-description-section h1 {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ****************************************** */
+/* BELOW 1200PX (FOR LANDSCAPE TABLETS)*/
+/* ****************************************** */
+
+@media (max-width: 75em) {
+  /* since were working w rem and we already set the font-size to 62.5% based on the screen we can just reduce the font-size instead of reducing each one */
+  html {
+    /* font-size: 9px; =>{ 9 / 16 * 10}*/
+    font-size: 56.25%;
+  }
+  .instructions,
+  .testimonial-text h2 {
+    font-size: 3.6rem;
+  }
+  .preferences,
+  .diets-card h3 {
+    font-size: 2.4rem;
+  }
+  /* for the sake of media queries, use custom set ups as classes-- so adjusting one would adjust all */
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  .page-header {
+    padding: 0 3.2rem;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+  }
+  .main-nav-links {
+    gap: 3.2rem;
+  }
+  .testimonial-text {
+    padding: 9.6rem 3.2rem;
+    /* we want to keep the upper space but allow it be horizontally aligned */
+  }
+}
+/* In media query try to fix at every 200-300px not 50px */
+
+/* ****************************************** */
+/* BELOW 944PX (FOR  TABLETS)*/
+/* ****************************************** */
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-description-section,
+  .hero-image-section {
+    text-align: center;
+  }
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .feature-img img {
+    height: 2.4rem;
+  }
+  .steps-box-text p:first-child {
+    font-size: 7.4rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .testimonial {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .cta {
+    grid-template-columns: 3fr 2fr;
+  }
+  .input-fields {
+    grid-template-columns: 1fr;
+  }
+  .btn-form {
+    margin-top: 1.2rem;
+  }
+  .mobile-nav-btn {
+    display: block;
+  }
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.705);
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* usually we put relative on the parent container, but in this instance-it's not necessary because we want it absolute in response to the viewport */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* hiding navigation */
+    /* using display:none would not allow transitions function */
+    /* instead use opacity */
+    opacity: 0;
+  }
+
+  .main-nav-links {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .nav-buttons:link,
+  .nav-buttons:visited {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,753 @@
+/* ****************************************** */
+/* HEADER-SECTION */
+/* ****************************************** */
+
+.page-header {
+  background-color: #fdf2e9;
+  /* BECAUSE WE WANT THE HEADER TO BE STICKY LATER... WE WOULD GIVE IT A FIXED HEIGHT, ELSE PADDING WILL BE JUST FINE */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 2.2rem;
+}
+
+/* ****************************************** */
+/* NAVIGATION-SECTION */
+/* ****************************************** */
+
+.main-nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+}
+.nav-buttons:link,
+.nav-buttons:visited {
+  font-weight: 500;
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.8rem;
+  transition: 0.3s all;
+}
+.nav-buttons:hover,
+.nav-buttons:active {
+  color: #e67e22;
+}
+
+.nav-buttons.nav-cta:link,
+.nav-buttons.nav-cta:visited {
+  background-color: #cf711f;
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  display: inline-block;
+}
+.nav-buttons.nav-cta:hover,
+.nav-buttons.nav-cta:active {
+  background-color: #c56817;
+}
+
+/* ****************************************** */
+/* HERO-SECTION */
+/* ****************************************** */
+
+.hero-section {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  max-width: 130rem;
+  align-items: center;
+}
+/* .hero-description-section {
+  padding: 2.4rem;
+} */
+.hero-description-section h1 {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+  letter-spacing: -0.5px;
+}
+.hero-paragraph {
+  line-height: 1.6;
+  font-size: 2rem;
+  color: #555;
+  margin-bottom: 4.8rem;
+}
+.cta-btn,
+.meal-plans-cta-btn:link,
+.meal-plans-cta-btn:visited {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.6rem 3.2rem;
+  text-decoration: none;
+  font-weight: 500;
+  /* transition occurs on the original state */
+  transition: 0.3s all;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  color: #fff;
+  background-color: #e67e22;
+}
+.btn--full:hover,
+.btn--full:active {
+  background-color: #c56817;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  color: #555;
+
+  background-color: #fff;
+}
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #fdf2e9;
+  /* box-shadow: inset 2px 0px 4px rgba(0, 0, 0, 0.233); */
+  /* inset makes it on the inside */
+  box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.233);
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  margin-top: 8rem;
+  gap: 1.6rem;
+}
+
+.delivered-images {
+  display: flex;
+}
+.delivered-images img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+.delivered-images img:last-child {
+  margin: 0;
+}
+.delivered-texts {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.delivered-texts span {
+  color: #cf711f;
+  font-weight: 700;
+}
+.hero-img {
+  width: 100%;
+}
+
+/* ****************************************** */
+/* FEATURED-IN-SECTION */
+/* ****************************************** */
+
+.featured-in-section {
+  padding: 4.8rem 0 3.2rem 0;
+}
+.featured-in-section h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2.4rem;
+  font-weight: 500;
+  color: #999;
+  letter-spacing: 0.75px;
+}
+
+.feature-img {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  justify-content: space-around;
+}
+.feature-img img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+
+/* ****************************************** */
+/* FUNCTIONALITY-SECTION */
+/* ****************************************** */
+
+.functionality-section {
+  padding: 9.6rem 0;
+}
+
+.subheading {
+  color: #c56817;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 2.4rem;
+}
+.instructions {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.steps-box-text p:first-child {
+  font-size: 8.4rem;
+  color: #dcdbdb;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.steps-box-text p:last-child {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.8rem;
+}
+.preferences {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.6rem;
+}
+.steps-box-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.steps-box-img img {
+  width: 35%;
+}
+.steps-box-img::before,
+.steps-box-img::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  /* THIS IS RESOURCEFUL BUT NOT NEEDED IN THIS BASED ON WHERE I PUT RELATIVE IT ALL READY CENTERS IT */
+}
+.steps-box-img::before {
+  width: 60%;
+  /* height: 60%; */
+  /* since the height isn't going to give us a square this way... we can use padding bottom */
+  padding-bottom: 60%;
+  /* the padding bottom is 6-% of the parent's width */
+  background-color: #fdf2e9;
+  z-index: -2;
+}
+.steps-box-img::after {
+  width: 45%;
+  /* height: 50%; */
+  /* since the height isn't going to give us a square this way... we can use padding bottom */
+  padding-bottom: 45%;
+  /* the padding bottom is 6-% of the parent's width */
+  background-color: #fae5d3;
+  z-index: -1;
+}
+
+/* ****************************************** */
+/* MEALS-SECTION */
+/* ****************************************** */
+
+.meals,
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.meals-section {
+  padding: 9.6rem 0;
+}
+.section-title {
+  text-transform: uppercase;
+  color: #cf711f;
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.menu-cards img {
+  width: 100%;
+  border-top-right-radius: 1.2rem;
+  border-top-left-radius: 1.2rem;
+}
+.menu-cards {
+  height: 50rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  transition: 0.4s all;
+}
+.menu-cards:hover {
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.137);
+  transform: translateY(-1.2rem);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+  height: auto;
+}
+.meal-content p {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+  font-weight: 600;
+}
+.meal-tags span {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  display: inline-block;
+
+  border-radius: 100px;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+.diet--1 {
+  background-color: #51cf66;
+}
+.diet--2 {
+  background-color: #94d82d;
+}
+.diet--3 {
+  background-color: #ffd43b;
+}
+.meal-tags {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1.2px;
+}
+
+.nutrition-facts {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 2rem;
+}
+.nutrition-facts li {
+  font-size: 1.8rem;
+  display: flex;
+  gap: 1.2rem;
+  color: #555;
+
+  align-items: center;
+}
+
+.diet-types {
+  list-style: none;
+  display: flex;
+
+  /* height: 43rem; use gap instead */
+  gap: 1.6rem;
+  flex-direction: column;
+}
+
+.diet-types li {
+  font-size: 1.8rem;
+  display: flex;
+  color: #555;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+.diets-card {
+  box-shadow: none;
+}
+.diets-card:hover {
+  box-shadow: none;
+  transform: none;
+}
+.icons {
+  color: #e67e22;
+}
+.meal-icons {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+.diet-icons {
+  height: 3rem;
+  width: 3rem;
+}
+
+.diets-card h3 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.recipe-link:link,
+.recipe-link:visited {
+  color: #e67e22;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+  transition: all 0.3s;
+}
+.recipe-link:hover,
+.recipe-link:active {
+  border-bottom: 1px solid transparent;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem;
+}
+
+/* ****************************************** */
+/* TESTIMONIALS-SECTION */
+/* ****************************************** */
+
+.testimonials-section {
+  background-color: #fdf2e9;
+}
+.testimonial {
+  display: grid;
+
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+.customer img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+.testimonial-title {
+  font-weight: 500;
+  display: block;
+  font-size: 1.6rem;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.testimonial-text {
+  padding: 9.6rem;
+}
+.testimonial-text h2 {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.individual-testimony {
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+.customer {
+  color: #555;
+}
+.customer p {
+  color: #6f6f6f;
+  font-size: 1.6rem;
+}
+.customer blockquote {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+.gallery {
+  gap: 1.6rem !important;
+  padding: 1.6rem;
+}
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: 0.4s all;
+}
+.gallery-item {
+  overflow: hidden;
+}
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* ****************************************** */
+/* PRICING-SECTION */
+/* ****************************************** */
+
+.pricing-section {
+  padding: 9.6rem 0;
+}
+.card {
+  border: 2px solid #fdf2e9;
+  padding: 4.6rem;
+  border-radius: 11px;
+  width: 75%;
+}
+
+.pricing-plan {
+  list-style: none;
+  display: flex;
+
+  gap: 1.6rem;
+  flex-direction: column;
+}
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  margin-bottom: 3.2rem;
+}
+.pricing-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.pricing-plan li {
+  font-size: 1.8rem;
+  display: flex;
+  color: #555;
+  align-items: center;
+  gap: 1.6rem;
+  line-height: 1.2;
+}
+
+.price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+.card--v--1 {
+  justify-self: end;
+}
+.card--v--2 {
+  position: relative;
+  background-color: #fdf2e9;
+  overflow: hidden;
+}
+.card--v--2::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  background-color: #ffd43b;
+  padding: 0.8rem 8rem;
+  transform: rotate(45deg);
+}
+aside {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #555;
+}
+.feature-components-text {
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.8rem;
+}
+
+.component-icon {
+  color: #e67e22;
+  height: 3.2rem;
+  width: 3.2rem;
+  background-color: #fdf2e9;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-components-title {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+
+/* ****************************************** */
+/* CALL-TO-ACTION-SECTION */
+/* ****************************************** */
+
+.call-to-action-section {
+  /* top / right / bottom / left */
+  /* padding: 4.8rem 0 12.8rem 0; */
+  /* top/horizontal/bottom/left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  /* background: #cf711f; */
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+}
+.cta-text {
+  color: #45260a;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+.cta-text h2 {
+  margin-bottom: 3.2rem;
+}
+.cta-text p {
+  line-height: 1.8;
+  font-size: 1.8rem;
+  margin-bottom: 4.8rem;
+}
+
+.input-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2.4rem;
+  column-gap: 3.2rem;
+}
+
+.input-fields input,
+.input-fields select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  /* inputs, button, and select don't inherit the font family directly */
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.input-fields input::placeholder {
+  color: #aaa;
+}
+.label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-image {
+  background-image: linear-gradient(to right bottom, #eb974e68, #e67d224a),
+    url("../ASSETS/IMAGES/eating.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.btn-form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  padding: 1.2rem;
+  align-self: end;
+}
+.btn-form:hover {
+  background-color: #fff;
+  color: #555;
+}
+.cta *:focus {
+  outline: none;
+  /* outline: none; this is  bad for accessibility, never do that alone*/
+  /* outline: 4px solid #c56817;
+  outline-offset: 5px; */
+  box-shadow: 0 0 0 0.8rem #cccccc7c;
+}
+
+/* ****************************************** */
+/* FOOTER-SECTION */
+/* ****************************************** */
+
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr repeat(3, 1fr);
+}
+.socials-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 3.2rem;
+}
+
+.col-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.logo-col {
+  display: flex;
+  flex-direction: column;
+}
+.socials-icon {
+  font-size: 2.4rem;
+}
+.socials-icon:hover {
+  color: #333;
+}
+.copyright {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #767676;
+  margin-top: auto;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.footer-end-links:link,
+.footer-end-links:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer-end-links:hover,
+.footer-end-links:active {
+  color: #555;
+}
+.address {
+  margin-bottom: 2.4rem;
+}
+address {
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #767676;
+}
