@@ -10,6 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo {
@@ -33,7 +34,7 @@
   text-decoration: none;
   color: #333;
   font-size: 1.8rem;
-  transition: 0.3s all;
+  transition: all 0.3s;
 }
 .nav-buttons:hover,
 .nav-buttons:active {
@@ -95,7 +96,7 @@
   text-decoration: none;
   font-weight: 500;
   /* transition occurs on the original state */
-  transition: 0.3s all;
+  transition: all 0.3s;
   border-radius: 9px;
   border: none;
   cursor: pointer;
@@ -291,10 +292,10 @@
   border-top-left-radius: 1.2rem;
 }
 .menu-cards {
-  height: 50rem;
+  /* height: 50rem; */
   border-radius: 1.2rem;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
-  transition: 0.4s all;
+  transition: all 0.4s;
 }
 .menu-cards:hover {
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.137);
@@ -303,7 +304,7 @@
 
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
-  height: auto;
+  /* height: auto; */
 }
 .meal-content p {
   font-size: 2.4rem;
@@ -406,9 +407,6 @@
 .recipe-link:active {
   border-bottom: 1px solid transparent;
 }
-.margin-bottom-md {
-  margin-bottom: 4.8rem;
-}
 
 /* ****************************************** */
 /* TESTIMONIALS-SECTION */
@@ -469,7 +467,7 @@
 .gallery-item img {
   width: 100%;
   display: block;
-  transition: 0.4s all;
+  transition: all 0.4s;
 }
 .gallery-item {
   overflow: hidden;
@@ -725,21 +723,21 @@ aside {
   color: #767676;
   margin-top: auto;
 }
-.footer-links {
+.nav-links {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
 }
-.footer-end-links:link,
-.footer-end-links:visited {
+.footer--links:link,
+.footer--links:visited {
   text-decoration: none;
   font-size: 1.6rem;
   color: #767676;
   transition: all 0.3s;
 }
-.footer-end-links:hover,
-.footer-end-links:active {
+.footer--links:hover,
+.footer--links:active {
   color: #555;
 }
 .address {

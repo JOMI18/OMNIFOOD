@@ -2,17 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+    <!-- Always include this line of code!!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel=" icon" href="./ASSETS/IMAGES/favicon.png" type="image/x-icon" />
+    <!-- favicon resized to 65 px -->
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <!-- apple has to be 180px -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- android fav icon needs a manifest file - and the picture resize is  needs 192px and 512px -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rubik:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- use squoosh to compress images -->
     <link rel="stylesheet" href="CSS/styles.css" />
     <link rel="stylesheet" href="CSS/general.css" />
     <link rel="stylesheet" href="CSS/queries.css" />
-    <title>OmniFoodProject- Never Cook Again</title>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+  "
+    ></script>
+    <script defer src="JS/script.js"></script>
+    <!-- keep your scripts and links in the head -->
+    <title>OmniFoodProject &mdash; Never Cook Again</title>
   </head>
   <body>
     <header class="page-header">
@@ -27,21 +56,23 @@
       <nav class="main-nav">
         <ul class="main-nav-links">
           <li>
-            <a href="#" class="nav-buttons">How It Works</a>
+            <a href="#functionality-section" class="nav-buttons"
+              >How It Works</a
+            >
           </li>
-          <li><a href="#" class="nav-buttons">Meals</a></li>
+          <li><a href="#meals-section" class="nav-buttons">Meals</a></li>
           <li>
-            <a href="#" class="nav-buttons">Testimonials</a>
+            <a href="#testimonials-section" class="nav-buttons">Testimonials</a>
           </li>
           <li>
-            <a href="#" class="nav-buttons"> Pricing </a>
+            <a href="#pricing-section" class="nav-buttons"> Pricing </a>
           </li>
           <li>
-            <a href="#" class="nav-buttons nav-cta">Try for free</a>
+            <a href="#cta-section" class="nav-buttons nav-cta">Try for free</a>
           </li>
         </ul>
       </nav>
-      <button class="mobile-nav-btn">
+      <button aria-label="Menu Bar" role="btn" class="mobile-nav-btn">
         <ion-icon class="mobile-nav-icon" name="menu-outline"></ion-icon>
         <ion-icon class="mobile-nav-icon" name="close-outline"></ion-icon>
       </button>
@@ -51,16 +82,22 @@
       <section class="hero-section">
         <div class="hero">
           <div class="hero-description-section">
-            <h1>A healthy meal delivered to your door, every single day</h1>
+            <h1 class="hero-heading">
+              A healthy meal delivered to your door, every single day
+            </h1>
             <p class="hero-paragraph">
               The smart 365-days-per-year food subscription that will make you
               eat healthy again. Tailored to your personal tastes and
               nutritional needs.
             </p>
-            <a class="meal-plans-cta-btn btn--full margin-right-sm" href="#"
+            <a
+              class="meal-plans-cta-btn btn--full margin-right-sm"
+              href="#cta-section"
               >Start eating well</a
             >
-            <a class="meal-plans-cta-btn btn--outline" href="#"
+            <a
+              class="meal-plans-cta-btn btn--outline"
+              href="#functionality-section"
               >Learn More &darr;
             </a>
             <div class="delivered-meals">
@@ -96,16 +133,23 @@
             </div>
           </div>
           <div class="hero-image-section">
-            <img
-              class="hero-img"
-              src="./ASSETS/IMAGES/hero.png"
-              alt="3-in-1 Hero Image --- Woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <picture>
+              <source
+                srcset="./ASSETS/IMAGES/hero-min.webp"
+                type="image/webp"
+              />
+              <source srcset="./ASSETS/IMAGES/hero-min.png" type="image/png" />
+              <img
+                class="hero-img"
+                src="./ASSETS/IMAGES/hero-min.png"
+                alt="3-in-1 Hero Image --- Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
 
-      <section class="featured-in-section">
+      <section class="featured-in-section" id="featured-in-section">
         <div class="container">
           <h2>As Featured In</h2>
           <div class="feature-img">
@@ -119,7 +163,7 @@
             />
             <img
               src="./ASSETS/IMAGES/logos/the-new-york-times.png"
-              alt="New York Times"
+              alt="New York Times logo"
               logo
             />
             <img src="./ASSETS/IMAGES/logos/forbes.png" alt="Forbes logo" />
@@ -131,7 +175,7 @@
         </div>
       </section>
 
-      <section class="functionality-section">
+      <section class="functionality-section" id="functionality-section">
         <div class="container">
           <span class="subheading"> How it works</span>
 
@@ -192,7 +236,7 @@
         </div>
       </section>
 
-      <section class="meals-section">
+      <section class="meals-section" id="meals-section">
         <div class="container meals">
           <span class="section-title">Meals</span>
           <h2 class="instructions">Omnifood AI chooses from 5,000+ recipes</h2>
@@ -209,21 +253,21 @@
               </div>
               <p>Japanese Gyozas</p>
               <ul class="nutrition-facts">
-                <li>
+                <li class="meal-attribute">
                   <ion-icon
                     class="meal-icons icons"
                     name="flame-outline"
                   ></ion-icon>
                   <span><strong>650</strong> Calories</span>
                 </li>
-                <li>
+                <li class="meal-attribute">
                   <ion-icon
                     class="meal-icons icons"
                     name="restaurant-outline"
                   ></ion-icon>
                   <span>NutriScore &reg; <strong>74</strong></span>
                 </li>
-                <li>
+                <li class="meal-attribute">
                   <ion-icon
                     class="meal-icons icons"
                     name="star-outline"
@@ -243,21 +287,21 @@
               </div>
               <p>Avocado Salad</p>
               <ul class="nutrition-facts">
-                <li>
+                <li class="meal-attribute">
                   <ion-icon
                     class="meal-icons icons"
                     name="flame-outline"
                   ></ion-icon>
                   <span><strong>400</strong> calories</span>
                 </li>
-                <li>
+                <li class="meal-attribute">
                   <ion-icon
                     class="meal-icons icons"
                     name="restaurant-outline"
                   ></ion-icon>
                   <span>NutriScore &reg; <strong>92</strong></span>
                 </li>
-                <li>
+                <li class="meal-attribute">
                   <ion-icon
                     class="meal-icons icons"
                     name="star-outline"
@@ -271,63 +315,63 @@
           <div class="menu-cards diets-card">
             <h3>Works with any diet:</h3>
             <ul class="diet-types">
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Vegetarian </span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Vegan </span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Pescatarian </span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Gluten-free </span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Lactose-free </span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Keto</span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Paleo</span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
                 ></ion-icon>
                 <span>Low FODMAP</span>
               </li>
-              <li>
+              <li class="diet-type-item">
                 <ion-icon
                   class="diet-icons icons"
                   name="checkmark-outline"
@@ -343,7 +387,10 @@
         </div>
       </section>
 
-      <section class="testimonials-section testimonial">
+      <section
+        class="testimonials-section testimonial"
+        id="testimonials-section"
+      >
         <div class="testimonial-text">
           <p class="testimonial-title">testimonials</p>
           <h2>Once you try it, you can't go back</h2>
@@ -474,7 +521,7 @@
         </div>
       </section>
 
-      <section class="pricing-section">
+      <section class="pricing-section" id="pricing-section">
         <div class="container">
           <span class="subheading"> Pricing</span>
 
@@ -630,7 +677,7 @@
         </div>
       </section>
 
-      <section class="call-to-action-section">
+      <section class="call-to-action-section" id="cta-section">
         <div class="container">
           <div class="cta">
             <div class="cta-text">
@@ -705,38 +752,39 @@
 
           <ul class="socials-links">
             <li>
-              <a class="footer-end-links" href="#">
+              <a aria-label="Instagram" class="footer--links" href="#">
                 <ion-icon class="socials-icon" name="logo-instagram"></ion-icon>
               </a>
             </li>
 
             <li>
-              <a class="footer-end-links" href="#"
+              <a aria-label="Facebook" class="footer--links" href="#"
                 ><ion-icon class="socials-icon" name="logo-facebook"></ion-icon
               ></a>
             </li>
             <li>
-              <a class="footer-end-links" href="#"
+              <a aria-label="Twitter" class="footer--links" href="#"
                 ><ion-icon class="socials-icon" name="logo-twitter"></ion-icon
               ></a>
             </li>
           </ul>
 
           <p class="copyright">
-            Copyright &copy; 2023 by Omnifood, Inc. All rights reserved.
+            Copyright &copy; <span class="year">2023</span> by Omnifood, Inc.
+            All rights reserved.
           </p>
         </div>
 
-        <div class="col">
+        <div class="address-col">
           <p class="col-title">Contact us</p>
 
           <address>
             <p class="address">
               623 Harrison St., 2nd Floor, San Francisco, CA 94107
             </p>
-            <a class="footer-end-links" href="tel:415-201-6370">415-201-6370</a>
+            <a class="footer--links" href="tel:415-201-6370">415-201-6370</a>
             <br />
-            <a class="footer-end-links" href="mailto:hello@omnifood.com"
+            <a class="footer--links" href="mailto:hello@omnifood.com"
               >hello@omnifood.com</a
             >
           </address>
@@ -744,41 +792,32 @@
 
         <nav class="nav-col">
           <p class="col-title">Account</p>
-          <ul class="footer-links">
-            <li><a class="footer-end-links" href="#">Create account</a></li>
-            <li><a class="footer-end-links" href="#">Sign in</a></li>
-            <li><a class="footer-end-links" href="#">iOS app</a></li>
-            <li><a class="footer-end-links" href="#">Android app</a></li>
+          <ul class="nav-links">
+            <li><a class="footer--links" href="#">Create account</a></li>
+            <li><a class="footer--links" href="#">Sign in</a></li>
+            <li><a class="footer--links" href="#">iOS app</a></li>
+            <li><a class="footer--links" href="#">Android app</a></li>
           </ul>
         </nav>
 
         <nav class="nav-col">
           <p class="col-title">Company</p>
-          <ul class="footer-links">
-            <li><a class="footer-end-links" href="#">About Omnifood</a></li>
-            <li><a class="footer-end-links" href="#">For Business</a></li>
-            <li><a class="footer-end-links" href="#">Cooking partners</a></li>
-            <li><a class="footer-end-links" href="#">Careers</a></li>
+          <ul class="nav-links">
+            <li><a class="footer--links" href="#">About Omnifood</a></li>
+            <li><a class="footer--links" href="#">For Business</a></li>
+            <li><a class="footer--links" href="#">Cooking partners</a></li>
+            <li><a class="footer--links" href="#">Careers</a></li>
           </ul>
         </nav>
         <nav class="nav-col">
           <p class="col-title">Resources</p>
-          <ul class="footer-links">
-            <li><a class="footer-end-links" href="#">Recipe directory</a></li>
-            <li><a class="footer-end-links" href="#">Help center</a></li>
-            <li><a class="footer-end-links" href="#">Privacy & terms</a></li>
+          <ul class="nav-links">
+            <li><a class="footer--links" href="#">Recipe directory</a></li>
+            <li><a class="footer--links" href="#">Help center</a></li>
+            <li><a class="footer--links" href="#">Privacy & terms</a></li>
           </ul>
         </nav>
       </div>
     </footer>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
