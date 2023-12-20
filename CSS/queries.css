@@ -97,7 +97,7 @@
     grid-template-columns: 1fr;
   }
   .gallery {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr) !important;
   }
   .cta {
     grid-template-columns: 3fr 2fr;
@@ -110,9 +110,14 @@
   }
   .mobile-nav-btn {
     display: block;
+    z-index: 1000;
   }
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.705);
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    /* webkit-- prefix for safari or chrome */
+    /*to check use the can i use website and search for appearance  */
+    backdrop-filter: blur(5px);
     position: absolute;
     height: 100vh;
     top: 0;
@@ -120,13 +125,27 @@
     width: 100%;
     /* usually we put relative on the parent container, but in this instance-it's not necessary because we want it absolute in response to the viewport */
     display: flex;
+    /* we changed our mind cos of animation */
     align-items: center;
     justify-content: center;
+    /* property name | duration | easing function  */
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
 
     /* hiding navigation */
     /* using display:none would not allow transitions function */
-    /* instead use opacity */
+    /*  instead Step:1 use opacity to remove visibility*/
     opacity: 0;
+    /*  instead Step:2 hide it from keyboard and mouse users */
+    pointer-events: none;
+    /*  instead Step:3 hide it from screen users */
+    visibility: hidden;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
   }
 
   .main-nav-links {
@@ -136,5 +155,155 @@
   .nav-buttons:link,
   .nav-buttons:visited {
     font-size: 3rem;
+  }
+  .nav-open .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+  .nav-open .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+}
+
+/* ****************************************** */
+/* BELOW 704PX (FOR SMALLER TABLETS)*/
+/* ****************************************** */
+
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .diets-card {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .instructions,
+  .testimonial-text h2 {
+    margin-bottom: 4.8rem;
+  }
+  .card {
+    width: 100%;
+  }
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+}
+
+/* ****************************************** */
+/* BELOW 576PX (FOR PHONES )*/
+/* ****************************************** */
+@media (max-width: 36em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols,
+  .individual-testimony,
+  .cta {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .hero-section {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+  .cta-btn,
+  .meal-plans-cta-btn:link,
+  .meal-plans-cta-btn:visited {
+    padding: 2.4rem 1.6rem;
+    /* its a good practice to make buttons bigger on mobile devices for easy manipulation */
+  }
+  .hero-img {
+    width: 80%;
+  }
+  .feature-img img {
+    height: 2rem;
+  }
+  .steps-box-img:nth-child(2) {
+    /* its 2 because nth child refers to the number of the element in the parent not the number of elements that has the class steps-box-image */
+    grid-row: 1;
+  }
+  .steps-box-img:nth-child(6) {
+    grid-row: 5;
+  }
+  .steps-box-img {
+    transform: translateY(2.4rem);
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.2rem;
+  }
+
+  .cta-image {
+    height: 32rem;
+    grid-row: 1;
+  }
+  .cta-text {
+    padding: 3.2rem;
+  }
+}
+
+/* ****************************************** */
+/* FIXING FLEX GAP PROPERTIES IN SAFARI*/
+/* ****************************************** */
+.no-flexbox-gap .main-nav-links li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .diet-type-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .diet-icons:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-meals {
+  margin-right: 1.6rem;
+}
+
+/* didn't */
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+/* find this */
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icons {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .nav-links li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-links li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-links li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
   }
 }
