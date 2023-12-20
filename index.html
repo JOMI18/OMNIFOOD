@@ -688,11 +688,19 @@
                 first meal is on us!
               </p>
 
-              <form action="#" id="#" class="input-fields">
+              <!-- this only works because of the netlify deployment -->
+              <form
+                action="#"
+                name="sign-up"
+                netlify
+                id="#"
+                class="input-fields"
+              >
                 <div>
                   <label class="label" for="full-name">Full Name</label>
                   <input
                     required
+                    name="full-name"
                     id="full-name"
                     type="text"
                     placeholder="John Smith"
@@ -703,6 +711,7 @@
                   <label class="label" for="email">Email Address</label>
                   <input
                     required
+                    name="email"
                     id="email"
                     type="email"
                     placeholder="me@example.com"
@@ -710,7 +719,7 @@
                 </div>
 
                 <div>
-                  <label class="label" for="select-where"
+                  <label class="label" name="select-where" for="select-where"
                     >Where did you hear from us?</label
                   >
                   <select name="" id="select-where" required>
